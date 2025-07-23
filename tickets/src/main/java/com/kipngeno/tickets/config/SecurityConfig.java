@@ -25,6 +25,7 @@ public class SecurityConfig {
                                 Customizer.withDefaults()
                         ))
                 .addFilterAfter(userProvisioningFilter, BearerTokenAuthenticationFilter.class);
+
         return http.build();
 
     }
