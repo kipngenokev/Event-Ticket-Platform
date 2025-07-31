@@ -1,4 +1,4 @@
-package com.kipngeno.tickets.domain;
+package com.kipngeno.tickets.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

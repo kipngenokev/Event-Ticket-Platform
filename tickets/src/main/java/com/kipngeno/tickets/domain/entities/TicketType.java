@@ -1,4 +1,4 @@
-package com.kipngeno.tickets.domain;
+package com.kipngeno.tickets.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -28,6 +28,9 @@ public class TicketType {
     @Column(name = "name", nullable = false)
     private String name;
 
+    @Column(name = "description")
+    private String description;
+
     @Column(name = "price", nullable = false)
     private double price;
 
@@ -53,11 +56,11 @@ public class TicketType {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         TicketType that = (TicketType) o;
-        return Double.compare(price, that.price) == 0 && Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(totalAvailable, that.totalAvailable) && Objects.equals(createdAt, that.createdAt) && Objects.equals(updatedAt, that.updatedAt);
+        return Double.compare(price, that.price) == 0 && Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(description, that.description) && Objects.equals(totalAvailable, that.totalAvailable) && Objects.equals(createdAt, that.createdAt) && Objects.equals(updatedAt, that.updatedAt);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, price, totalAvailable, createdAt, updatedAt);
+        return Objects.hash(id, name, description, price, totalAvailable, createdAt, updatedAt);
     }
 }

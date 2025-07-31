@@ -1,6 +1,6 @@
 package com.kipngeno.tickets.repositories;
 
-import com.kipngeno.tickets.domain.User;
+import com.kipngeno.tickets.domain.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

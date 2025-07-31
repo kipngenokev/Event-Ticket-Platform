@@ -1,6 +1,6 @@
 package com.kipngeno.tickets.filters;
 
-import com.kipngeno.tickets.domain.User;
+import com.kipngeno.tickets.domain.entities.User;
 import com.kipngeno.tickets.repositories.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
