@@ -7,10 +7,11 @@ services:
 
     restart: always
     environment:
-      POSTGRES_PASSWORD: changemeinprod!
-
-
- #Database management interface
+      POSTGRES_DB: tickets
+      POSTGRES_USER: tickets
+      POSTGRES_PASSWORD: Tickets@1
+      POSTGRES_HOST_AUTH_METHOD: md5
+  #Database management interface
   adminer:
     image: adminer:latest
     restart: always
@@ -22,8 +23,8 @@ services:
     ports:
       - "9090:8080"
     environment:
-      KEYCLOAK_ADMIN: admin
-      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_BOOTSTRAP_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: admin
     volumes:
       - keycloak-data:/opt/keycloak/data
     command:
